@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/index.html"
-      ><img src="static/images/looogo.png"
-    /></a>
+    <a class="navbar-brand" href="/index.html">
+      <img src="{{ url_for('static', filename='images/looogo.png') }}" />
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -16,40 +16,50 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- The Information Dropdown comes first -->
+        <li class="nav-item dropdown">
+          <a
+          class="nav-link dropdown-toggle text-dark"
+          href="#"
+          id="informationDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          The Information
+        </a>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="informationDropdown">
+            <li><a class="dropdown-item" href="link1.html">Positives</a></li>
+            <li><a class="dropdown-item" href="link2.html">Negatives</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a
+                class="dropdown-item text-dark fw-bold disabled"
+                aria-disabled="true"
+                href="#"
+                >Advanced Information</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="link4.html">Link 4</a></li>
+            <li><a class="dropdown-item" href="link5.html">Link 5</a></li>
+          </ul>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/index.html"
             >Home</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="link1.html">Link 1</a>
+          <a class="nav-link text-dark" href="link1.html">Our mission</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="link3.html">Link 3</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+        <li class="naitem">
+          <a class="nav-link disabled text-dark" aria-disabled="true" href="#"
+            >What you can do to help</a
           >
-            The Information
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="link1.html">Negatives</a></li>
-            <li><a class="dropdown-item" href="layout.html">Positives</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <a class="nav-link disabled" aria-disabled="true"
-              >Advanced Information</a
-            >
-            <li><a class="dropdown-item" href="link4.html">Link 4</a></li>
-            <li><a class="dropdown-item" href="link5.html">Link 5</a></li>
-          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="link3.html">Donate</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
